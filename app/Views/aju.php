@@ -124,27 +124,11 @@
                                                 <input type="text" class="form-control" id="pekerjaan"
                                                     placeholder="Isi Pekerjaan" name="pekerjaan_pemohon"
                                                     value="<?= old('pekerjaan_pemohon') ?>">
-                                                <!-- Fax -->
-                                                <label for="fax" class="form-label mt-3">Fax</label>
-                                                <input type="text" class="form-control" id="fax" placeholder="Isi Fax"
-                                                    name="fax_pemohon" value="<?= old('fax_pemohon') ?>">
                                                 <!-- No Telp -->
                                                 <label for="notelp" class="form-label mt-3">No. Telepon</label>
                                                 <input type="text" class="form-control" id="notelp"
                                                     placeholder="Isi No Telepon" name="notelp_pemohon"
                                                     value="<?= old('notelp_pemohon') ?>">
-                                                <!-- Tempat Lahir -->
-                                                <label for="tempatLahir" class="form-label mt-3">Tempat Lahir</label>
-                                                <input type="text" class="form-control" id="tempatLahir"
-                                                    placeholder="Isi Tempat Lahir" name="tempatlahir_pemohon"
-                                                    value="<?= old('tempatlahir_pemohon') ?>">
-                                                <!-- tanggal lahir -->
-                                                <label for="tglLahir" class="form-label mt-3">Tanggal Lahir</label>
-                                                <div class="input-group date">
-                                                    <input type="date" class="form-control"
-                                                        placeholder="Isi Tanggal Lahir" name="tanggallahir_pemohon"
-                                                        value="<?= old('tanggallahir_pemohon') ?>">
-                                                </div>
                                             </div>
                                             <div class="col">
                                                 <!-- email -->
@@ -152,14 +136,6 @@
                                                 <input type="email" class="form-control" id="tempatLahir"
                                                     placeholder="Isi email" name="email_pemohon"
                                                     value="<?= old('email_pemohon') ?>">
-                                                <!-- Jenis kelamin -->
-                                                <label for="jnsKelamin" class="form-label mt-3">Jenis Kelamin</label>
-                                                <select id="jnsKelamin" class="form-select" name="jenis_kelamin">
-                                                    <option value="" disabled selected>-- Pilih Opsi Jenis Kelamin --
-                                                    </option>
-                                                    <option value="lk">Laki-Laki</option>
-                                                    <option value="pr">Perempuan</option>
-                                                </select>
                                                 <!-- alamat -->
                                                 <label for="kota" class="form-label mt-3">Alamat</label>
                                                 <select id="kota" class="form-select" name="kota_pemohon">
@@ -175,14 +151,6 @@
                                                     id="floatingTextarea2" style="height: 100px"
                                                     name="detailalamat_pemohon"
                                                     value="<?= old('detailalamat_pemohon') ?>"></textarea>
-                                                <input type="text" class="form-control mt-3" id="tempatLahir"
-                                                    placeholder="Isi Kode Pos" name="kodepos_pemohon"
-                                                    value="<?= old('kodepos_pemohon') ?>">
-                                                <!-- unggah dokumen -->
-                                                <label for="formFile" class="form-label mt-3">Dokumentasi Identitas
-                                                    Pemohon <i>format (jpg, png,atau pdf)</i></label>
-                                                <input class="form-control" type="file" id="formFile" name="dok_pemohon"
-                                                    value="<?= old('dok_pemohon') ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -222,34 +190,19 @@
                                                     <input type="text" class="form-control" id="ktp"
                                                         placeholder="Isi No. KTP" name="noktp_kuasa"
                                                         value="<?= old('noktp_kuasa') ?>">
-                                                    <!-- email -->
-                                                    <label for="email" class="form-label mt-3">Email</label>
-                                                    <input type="email" class="form-control" id="email"
-                                                        placeholder="Isi Email" name="email_kuasa"
-                                                        value="<?= old('email_kuasa') ?>">
-                                                    <!-- Jenis kelamin -->
-                                                    <label for="jnsKelamin" class="form-label mt-3">Jenis
-                                                        Kelamin</label>
-                                                    <select id="jnsKelamin" class="form-select" name="jenis_kelamin">
-                                                        <option value="" disabled selected>-- Pilih Opsi Jenis Kelamin
-                                                            --
-                                                        </option>
-                                                        <option value="lk">Laki-Laki</option>
-                                                        <option value="pr">Perempuan</option>
-                                                    </select>
-                                                    <!-- Fax -->
-                                                    <label for="fax" class="form-label mt-3">Fax</label>
-                                                    <input type="text" class="form-control" id="ktp"
-                                                        placeholder="Isi Fax" name="fax_kuasa"
-                                                        value="<?= old('fax_kuasa') ?>">
-                                                </div>
-                                                <div class="col">
                                                     <!-- No. Telp -->
                                                     <label for="telpKuasa" class="form-label mt-3">No.
                                                         Telepon/HP</label>
                                                     <input type="text" class="form-control" id="telpKuasa"
                                                         placeholder="Isi No. Telepon/HP Kuasa" name="notelp_kuasa"
                                                         value="<?= old('notelp_kuasa') ?>">
+                                                    <!-- email -->
+                                                    <label for="email" class="form-label mt-3">Email</label>
+                                                    <input type="email" class="form-control" id="email"
+                                                        placeholder="Isi Email" name="email_kuasa"
+                                                        value="<?= old('email_kuasa') ?>">
+                                                </div>
+                                                <div class="col">
                                                     <!-- alamat -->
                                                     <label for="kota" class="form-label mt-3">Alamat</label>
                                                     <select id="kota" class="form-select" name="kota_kuasa">
@@ -265,11 +218,6 @@
                                                         id="floatingTextarea2" style="height: 100px"
                                                         name="detailalamat_kuasa"
                                                         value="<?= old('detailalamat_kuasa') ?>"></textarea>
-                                                    <!-- unggah dokumen -->
-                                                    <label for="formFile" class="form-label mt-3">Dokumentasi Identitas
-                                                        Kuasa Hukum <i>format (jpg, png,atau pdf)</i></label>
-                                                    <input class="form-control" type="file" id="formFile"
-                                                        name="dok_kuasa" value="<?= old('dok_kuasa') ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -282,18 +230,16 @@
                                 <button class="accordion-button text-light" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
                                     style="background-image: url('assets/img/foter.png'); background-size:cover;">
-                                    <h4><strong>C. Mengenai Permohonan Informasi</strong></h4>
+                                    <h4><strong>C. Identitas Termohon</strong></h4>
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse show"
                                 aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <h5 class="mb-3">C.1 Data Termohon</h5>
                                     <div class="row">
                                         <div class="col">
                                             <!-- badan publik -->
-                                            <label for="namaBadanPublik" class="form-label">Nama Badan Publik/Lembaga
-                                                Publik</label>
+                                            <label for="namaBadanPublik" class="form-label">Nama Badan Publik</label>
                                             <input type="text" class="form-control" id="namaBadanPublik"
                                                 placeholder="Isi Nama Badan Publik/Lembaga Publik"
                                                 name="namabadanpublik_termohon"
@@ -345,29 +291,28 @@
                                             <input type="text" class="form-control" id="telpTermohon"
                                                 placeholder="Isi No. Telepon/HP Termohon" name="notelp_termohon"
                                                 value="<?= old('notelp_termohon') ?>">
-                                            <!-- Fax -->
-                                            <label for="fax" class="form-label mt-3">Fax</label>
-                                            <input type="text" class="form-control" id="fax" placeholder="Isi Fax"
-                                                name="fax_termohon" value="<?= old('fax_termohon') ?>">
                                             <!-- email -->
                                             <label for="Email" class="form-label mt-3">Email</label>
                                             <input type="email" class="form-control" id="email" placeholder="Isi Email"
                                                 name="email_termohon" value="<?= old('email_termohon') ?>">
                                         </div>
                                     </div>
-                                    <h5 class="mb-3 mt-5">C.2 Informasi yang dimohon</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button text-light" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    style="background-image: url('assets/img/foter.png'); background-size:cover;">
+                                    <h4><strong>D. Informasi Sengketa</strong></h4>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show"
+                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
                                     <div class="row">
                                         <div class="col">
-                                            <label for="kategoriSengketa" class="form-label mt-3">Kategori
-                                                Sengketa</label>
-                                            <select id="kategoriSengketa" class="form-select" name="kategori_sengketa">
-                                                <option selected>Pilih Kategori Sengketa</option>
-                                                <?php foreach ($sengketa as $row) : ?>
-                                                <option value="<?= $row['id_kategorisengketa'] ?>">
-                                                    <?= $row['nama_kategorisengketa'] ?>
-                                                </option>
-                                                <?php endforeach ?>
-                                            </select>
                                             <!-- Deskripsi -->
                                             <label for="deskripsi" class="form-label mt-3">Deskripsi</label>
                                             <textarea class="form-control" placeholder="Isi deskripsi"
@@ -381,14 +326,6 @@
                                                 placeholder="Isi petugas penerima"
                                                 name="petugaspenerima_informasiyangdimohon"
                                                 value="<?= old('petugaspenerima_informasiyangdimohon') ?>">
-                                        </div>
-                                        <div class="col">
-                                            <!-- unggah dokumen -->
-                                            <label for="formFile" class="form-label mt-3">Unggah Dokumen <i>format (jpg,
-                                                    png,atau pdf)</i></label>
-                                            <input class="form-control" type="file" id="formFile"
-                                                name="dok_informasiyangdimohon"
-                                                value="<?= old('dok_informasiyangdimohon') ?>">
                                             <!-- Alasan Permohonan Informasi -->
                                             <label for="alasan" class="form-label mt-3">Alasan Permohonan
                                                 Informasi</label>
@@ -396,55 +333,22 @@
                                                 id="floatingTextarea2" style="height: 100px"
                                                 name="alasan_informasiyangdimohon"
                                                 value="<?= old('alasan_informasiyangdimohon') ?>"></textarea>
-                                            <!-- tanggal permohoan -->
-                                            <label for="tglMohon" class="form-label mt-3">Tanggal Permohonan</label>
-                                            <<div class="input-group date">
-                                                <input type="date" class="form-control" placeholder="Isi Tanggal Lahir"
-                                                    name="tanggallahir_pemohon">
+                                        </div>
+                                        <div class="col">
+                                            <label for="formFile" class="form-label">Unggah Salinan Dokumen Tambahan
+                                                #1
+                                                <i>format (jpg, png,
+                                                    atau pdf)</i></label>
+                                            <input class="form-control" type="file" id="formFile" name="doklengkap"
+                                                value="<?= old('doklengkap') ?>">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button text-light" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
-                                style="background-image: url('assets/img/foter.png'); background-size:cover;">
-                                <h4><strong>D. Dokumen Kelengkapan Permohonan</strong></h4>
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Unggah Salinan Dokumen Tambahan #1
-                                        <i>format (jpg, png,
-                                            atau pdf)</i></label>
-                                    <input class="form-control" type="file" id="formFile" name="doklengkap"
-                                        value="<?= old('doklengkap') ?>">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Unggah Salinan Dokumen Tambahan #2
-                                        <i>format (jpg, png,
-                                            atau pdf)</i></label>
-                                    <input class="form-control" type="file" id="formFile" name="doklengkapp"
-                                        value="<?= old('doklengkapp') ?>">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Unggah Salinan Dokumen Tambahan #3
-                                        <i>format (jpg, png,
-                                            atau pdf)</i></label>
-                                    <input class="form-control" type="file" id="formFile" name="doklengkappp"
-                                        value="<?= old('doklengkappp') ?>">
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div><button type="submit" class="btn btn-primary">Ajukan Permohonan</button>
-            </div>
+                    <button type="submit" class="btn btn-primary">Ajukan Permohonan</button>
+                </div>
             </div>
         </form>
     </section>
