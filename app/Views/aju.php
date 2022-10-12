@@ -105,6 +105,7 @@
                                         </select>
                                     </div>
 
+
                                     <div class="col mt-4">
                                         <div class="row">
                                             <div class="col">
@@ -403,160 +404,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-3 mt-5">C.3 Jawaban atas Permohonan Informasi</h5>
-                                <label for="jwbMohon" class="form-label mt-3">Apakah sudah ada Jawaban atas
-                                    Permohonan
-                                    Informasi?</label>
-                                <select id="jwbMohon" class="form-select">
-                                    <option value="no">Tidak</option>
-                                    <option value="yes">Ya</option>
-                                </select>
-                                <div class="output">
-                                    <div id="no" class="answer no"></div>
-                                    <div id="yes" class="answer yes">
-                                        <div class="row">
-                                            <div class="col">
-                                                <!-- Deskripsi Jawaban -->
-                                                <label for="deskc3" class="form-label mt-3">Deskripsi</label>
-                                                <textarea class="form-control" placeholder="Isi deskripsi"
-                                                    id="floatingTextarea2" style="height: 100px" name="deskipsi_jawaban"
-                                                    value="<?= old('deskipsi_jawaban') ?>"></textarea>
-                                                <!-- unggah dokumen -->
-                                                <label for="formFile" class="form-label mt-3">Unggah Dokumen
-                                                    <i>format (jpg, png,atau pdf)</i></label>
-                                                <input class="form-control" type="file" id="formFilec3"
-                                                    name="dok_jawaban" value="<?= old('dok_jawaban') ?>">
-                                            </div>
-                                            <div class="col">
-                                                <!-- tanggal permohoan -->
-                                                <label for="tglMohon" class="form-label mt-3">Tanggal
-                                                    Jawaban</label>
-                                                <div class="input-group date">
-                                                    <input type="date" class="form-control"
-                                                        placeholder="Isi Tanggal Permohonan Jawaban"
-                                                        name="tanggal_jawaban" value="<?= old('tanggal_jawaban') ?>">
-                                                </div>
-                                                <!-- Pejabat yang menandatangani -->
-                                                <label for="ttdPejabat" class="form-label mt-3">Pejabat yang
-                                                    Menandatangani</label>
-                                                <input type="text" class="form-control" id="petugasPenerima"
-                                                    placeholder="Isi Pejabat yang Menandatangani" name="ttd_jawaban"
-                                                    value="<?= old('ttd_jawaban') ?>">
-                                                <!-- unggah dokumen -->
-                                                <label for="formFile" class="form-label mt-3">Unggah Salinan Tanda
-                                                    Terima Jawaban atas Permohonan <i>format (jpg, png,atau
-                                                        pdf)</i></label>
-                                                <input class="form-control" type="file" id="formFilec3"
-                                                    name="dokttd_jawaban" value="<?= old('dokttd_jawaban') ?>">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5 class="mb-3 mt-5">C.4 Keberatan</h5>
-                                <label for="jwbBerat" class="form-label mt-3">Apakah ada Keberatan atas
-                                    Jawaban?</label>
-                                <select id="jwbBerat" class="form-select">
-                                    <option value="nos">Tidak</option>
-                                    <option value="yess">Ya</option>
-                                </select>
-                                <div class="output">
-                                    <div id="nos" class="answerr nos"></div>
-                                    <div id="yess" class="answerr yess">
-                                        <div class="row">
-                                            <div class="col">
-                                                <!-- Deskripsi Keberatan -->
-                                                <label for="deskc4" class="form-label mt-3">Deskripsi</label>
-                                                <textarea class="form-control" placeholder="Isi deskripsi"
-                                                    id="floatingTextarea2" style="height: 100px"
-                                                    name="deskripsi_keberatan"
-                                                    value="<?= old('deskripsi_keberatan') ?>"></textarea>
-                                                <!-- unggah dokumen -->
-                                                <label for="formFile" class="form-label mt-3">Unggah Dokumen
-                                                    <i>format (jpg, png,atau pdf)</i></label>
-                                                <input class="form-control" type="file" id="formFilec4"
-                                                    name="dok_keberatan" value="<?= old('dok_keberatan') ?>">
-                                            </div>
-                                            <div class="col">
-                                                <!-- tanggal permohoan -->
-                                                <label for="tglBerat" class="form-label mt-3">Tanggal
-                                                    Keberatan</label>
-                                                <div class="input-group date">
-                                                    <input type="date" class="form-control"
-                                                        placeholder="Isi Tanggal Lahir" name="tanggallahir_pemohon"
-                                                        value="<?= old('tanggallahir_pemohon') ?>">
-                                                </div>
-                                                <!-- Pejabat yang menandatangani -->
-                                                <label for="ttdBerat" class="form-label mt-3">Pejabat yang
-                                                    Menerima</label>
-                                                <input type="text" class="form-control" id="pejabatTerima"
-                                                    placeholder="Isi Pejabat yang menerima" name="pejabat_keberatan"
-                                                    value="<?= old('pejabat_keberatan') ?>">
-                                                <!-- unggah dokumen -->
-                                                <label for="formFile" class="form-label mt-3">Unggah Salinan Tanda
-                                                    Terima Jawaban atas Permohonan <i>format (jpg, png,atau
-                                                        pdf)</i></label>
-                                                <input class="form-control" type="file" id="formFilec4"
-                                                    name="dokttd_keberatan" value="<?= old('dokttd_keberatan') ?>">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5 class="mb-3 mt-5">C.5 Tanggapan atas Keberatan</h5>
-                                <label for="jwbTang" class="form-label mt-3">Apakah ada Tanggapan atas
-                                    Keberatan?</label>
-                                <select id="jwbTang" class="form-select">
-                                    <option value="noss">Tidak</option>
-                                    <option value="yesss">Ya</option>
-                                </select>
-                                <div class="output">
-                                    <div id="noss" class="answerr noss"></div>
-                                    <div id="yesss" class="answerr yesss">
-                                        <div class="row">
-                                            <div class="col">
-                                                <!-- Deskripsi Jawaban -->
-                                                <label for="deskc4" class="form-label mt-3">Deskripsi</label>
-                                                <textarea class="form-control" placeholder="Isi deskripsi"
-                                                    id="floatingTextarea2" style="height: 100px"
-                                                    name="deskripsi_tanggapberat"
-                                                    value="<?= old('deskripsi_tanggapberat') ?>"></textarea>
-                                                <!-- unggah dokumen -->
-                                                <label for="formFile" class="form-label mt-3">Unggah Salinan Surat
-                                                    Tanggapan atas Keberatan Permohonan <i>format
-                                                        (jpg,
-                                                        png,atau pdf)</i></label>
-                                                <input class="form-control" type="file" id="formFilec4"
-                                                    name="dok_tanggapberat" value="<?= old('dok_tanggapberat') ?>">
-                                            </div>
-                                            <div class="col">
-                                                <!-- tanggal permohoan -->
-                                                <label for="tglBerat" class="form-label mt-3">Tanggal
-                                                    Keberatan</label>
-                                                <div class="input-group date">
-                                                    <input type="date" class="form-control"
-                                                        placeholder="Isi Tanggal Tanggapan atas keberatan"
-                                                        name="tanggal_tanggapberat"
-                                                        value="<?= old('tanggal_tanggapberat') ?>">
-                                                </div>
-                                                <!-- Pejabat yang menandatangani -->
-                                                <label for="ttdBerat" class="form-label mt-3">Pejabat yang
-                                                    menandatangani</label>
-                                                <input type="text" class="form-control" id="pejabatTerima"
-                                                    placeholder="Isi Pejabat yang menandatangani"
-                                                    name="ttd_tanggapberat" value="<?= old('ttd_tanggapberat') ?>">
-                                                <!-- unggah dokumen -->
-                                                <label for="formFile" class="form-label mt-3">Unggah Salinan Tanda
-                                                    Terima Terima atas Bukti Pemberian Keberatan Pemohon <i>format
-                                                        (jpg,
-                                                        png,atau pdf)</i></label>
-                                                <input class="form-control" type="file" id="formFilec4"
-                                                    name="dok_tanggapberat" value="<?= old('dok_tanggapberat') ?>">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">
