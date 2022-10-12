@@ -96,8 +96,10 @@
                                     <div class="col">
                                         <!-- Jenis Sengketa -->
                                         <label for="jenis_sengketa" class="form-label mt-3">Jenis Sengketa</label>
-                                        <select id="jenis_sengketa" class="form-select" name="jenis_sengketa">
-                                            <option value="" disabled selected>-- Pilih Opsi Jenis Sengketa --</option>
+                                        <select id="jenis_sengketa" class="form-select" name="jenis_sengketa"
+                                            style="color:grey ;">
+                                            <option value="" disabled selected>-- Pilih Opsi Jenis
+                                                Sengketa --</option>
                                             <option value="umum">Umum</option>
                                             <option value="pemilu">Pemilu</option>
                                         </select>
