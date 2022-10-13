@@ -5,10 +5,10 @@ use CodeIgniter\Model;
 
 class ModelPemohon extends Model
 {
-    protected $table = 'tbl_identitaspemohonindividu';
+    protected $table = 'tbl_pemohon';
     protected $primarykey = 'id_individu';
 
-    protected $allowedFields = ['jenis_sengketa','nama_pemohon','noktp_pemohon','pekerjaan_pemohon','fax_pemohon','notelp_pemohon','tempatlahir_pemohon','tanggallahir_pemohon','email_pemohon','jenis_kelamin','id_kota','detailalamat_pemohon','kodepos_pemohon','dok_pemohon','id_kuasa','id_termohon','id_jawaban','id_informasiyangdimohon','id_keberatan','id_tanggapanberat','id_doklengkap'];
+    protected $allowedFields = ['jenis_sengketa', 'nama_pemohon', 'noktp_pemohon', 'pekerjaan_pemohon', 'notelp_pemohon', 'email_pemohon', 'id_kota', 'detailalamat_pemohon'];
 
     public function joinReg()
     {
