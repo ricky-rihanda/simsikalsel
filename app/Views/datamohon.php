@@ -45,34 +45,100 @@
         </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
-        <div class="card">
-            <div class="card-body">
-                <input type="text" class="form-control mt-4 mb-3" id="inputCity" placeholder="Cari Data Permohonan">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>Pemohon</th>
-                                <th>Kuasa</th>
-                                <th>Termohon</th>
-                                <th>Dokumen</th>
-                                <th>Status</th>
-                                <th>Modify by</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+    <section class="section dashboard">
+      <div class="row">
+        <!-- Left side columns -->
+        <div class="col-lg-12">
+          <div class="row">
+            <!-- Start Lihat Jadwal Anda -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Jadwal Sidang KI</h5>
 
-                            <tr>
-                                <td colspan="7">Belum Ada Data</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                  <table class="table datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Pemohon</th>
+                        <th scope="col">Komisioner</th>
+                        <th scope="col">Tanggal Sidang</th>
+                        <th scope="col">Detail</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Sobirin</td>
+                        <td>Brandon Jacob</td>
+                        <td>10/10/2022</td>
+                        <td>
+                          <button type="button" class="btn btn-warning btn-sm">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <!-- <th scope="row"><a href="#">#2147</a></th>
+                          <td>Bridie Kessler</td>
+                          <td>
+                            <a href="#" class="text-primary"
+                              >Blanditiis dolor omnis similique</a
+                            >
+                          </td>
+                          <td>$47</td>
+                          <td><span class="badge bg-warning">Pending</span></td>
+                        </tr> -->
+                      </tr>
+
+                      <tr>
+                        <!-- <th scope="row"><a href="#">#2049</a></th>
+                          <td>Ashleigh Langosh</td>
+                          <td>
+                            <a href="#" class="text-primary"
+                              >At recusandae consectetur</a
+                            >
+                          </td>
+                          <td>$147</td>
+                          <td>
+                            <span class="badge bg-success">Approved</span>
+                          </td> -->
+                      </tr>
+
+                      <tr>
+                        <!-- <th scope="row"><a href="#">#2644</a></th>
+                          <td>Angus Grady</td>
+                          <td>
+                            <a href="#" class="text-primar"
+                              >Ut voluptatem id earum et</a
+                            >
+                          </td>
+                          <td>$67</td>
+                          <td><span class="badge bg-danger">Rejected</span></td> -->
+                      </tr>
+
+                      <tr>
+                        <!-- <th scope="row"><a href="#">#2644</a></th>
+                          <td>Raheem Lehner</td>
+                          <td>
+                            <a href="#" class="text-primary"
+                              >Sunt similique distinctio</a
+                            >
+                          </td>
+                          <td>$165</td>
+                          <td>
+                            <span class="badge bg-success">Approved</span>
+                          </td> -->
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                </p>
+              </div>
             </div>
+            <!-- End Lihat Jadwal Anda -->
+          </div>
         </div>
+        <!-- End Left side columns -->
+      </div>
     </section>
 </main>
 <!-- ======= Footer ======= -->

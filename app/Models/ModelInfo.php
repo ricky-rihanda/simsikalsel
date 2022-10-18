@@ -5,13 +5,13 @@ use CodeIgniter\Model;
 
 class ModelInfo extends Model
 {
-    protected $table = 'tbl_informasiyangdimohon';
-    protected $primarykey = 'id_informasiyangdimohon';
+    protected $table = 'tbl_sengketa';
+    protected $primarykey = 'id_sengketa';
 
-    protected $allowedFields = ['id_kategorisengketa','deskripsi_informasiyangdimohon','petugaspenerima_informasiyangdimohon','dok_informasiyangdimohon','alasan_informasiyangdimohon','tanggalpermohonan_informasiyangdimohon'];
+    protected $allowedFields = ['id_individu', 'id_kategorisengketa', 'deskripsi_sengketa', 'alasan_sengketa', 'dok_sengketa', 'dokk_sengketa', 'dokkk_sengketa'];
 
     public function joinReg()
     {
-        return $this->db->table('tbl_informasiyangdimohon')->select('*')->join('tbl_kategorisengketa', 'tbl_informasiyangdimohon.id_kategorisengketa = tbl_kategorisengketa.id_kategorisengketa')->get()->getResultArray();
+        return $this->db->table('tbl_sengketa')->select('*')->join('tbl_kategorisengketa', 'tbl_sengketa.id_kategorisengketa = tbl_kategorisengketa.id_kategorisengketa')->get()->getResultArray();
     }
 }

@@ -96,16 +96,13 @@
                                     <div class="col">
                                         <!-- Jenis Sengketa -->
                                         <label for="jenis_sengketa" class="form-label mt-3">Jenis Sengketa</label>
-                                        <select id="jenis_sengketa" class="form-select" name="jenis_sengketa"
-                                            style="color:grey ;">
-                                            <option value="" disabled selected>-- Pilih Opsi Jenis
+                                        <select id="jenis_sengketa" class="form-select" name="jenis_sengketa">
+                                            <option value="" disabled selected style="color:grey ;">-- Pilih Opsi Jenis
                                                 Sengketa --</option>
                                             <option value="umum">Umum</option>
                                             <option value="pemilu">Pemilu</option>
                                         </select>
                                     </div>
-
-
                                     <div class="col mt-4">
                                         <div class="row">
                                             <div class="col">
@@ -141,11 +138,10 @@
                                                 <select id="kota" class="form-select" name="kota_pemohon">
                                                     <option selected>Pilih Kota/Kabupaten</option>
                                                     <?php foreach ($kota as $row) : ?>
-                                                    <option value="<?= $row['id_kota'] ?>">
-                                                        <?= $row['nama_kota'] ?>
-                                                    </option>
+                                                        <option value="<?= $row['id_kota'] ?>" <?php  echo (old('kota_pemohon') == $row['id_kota']) ? "selected" : "" ?>>
+                                                    <?= $row['nama_kota'] ?>
+                                                </option>
                                                     <?php endforeach ?>
-
                                                 </select>
                                                 <textarea class="form-control mt-3" placeholder="Isi detail alamat"
                                                     id="floatingTextarea2" style="height: 100px"
@@ -169,7 +165,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <label for="kuasa" class="form-label">Apakah anda memiliki kuasa?</label>
-                                    <select id="kuasa" class="form-select" name="pilih_kuasa" required>
+                                    <select id="kuasa" class="form-select" name="pilih_kuasa">
                                         <option selected disabled value="">Choose...</option>
                                         <option value="tdk">Tidak</option>
                                         <option value="ye">Ya</option>
@@ -207,11 +203,10 @@
                                                     <label for="kota" class="form-label mt-3">Alamat</label>
                                                     <select id="kota" class="form-select" name="kota_kuasa">
                                                         <option selected>Pilih Kabupaten/Kota</option>
-                                                        <option selected>Pilih Kota/Kabupaten</option>
                                                         <?php foreach ($kota as $row) : ?>
-                                                        <option value="<?= $row['id_kota'] ?>">
-                                                            <?= $row['nama_kota'] ?>
-                                                        </option>
+                                                            <option value="<?= $row['id_kota'] ?>" <?php  echo (old('kota_kuasa') == $row['id_kota']) ? "selected" : "" ?>>
+                                                    <?= $row['nama_kota'] ?>
+                                                </option>
                                                         <?php endforeach ?>
                                                     </select>
                                                     <textarea class="form-control mt-3" placeholder="Isi detail alamat"
@@ -254,7 +249,7 @@
                                             <select id="kategori" class="form-select" name="kategori_termohon">
                                                 <option selected>Pilih Kategori Termohon</option>
                                                 <?php foreach ($kategori as $row) : ?>
-                                                <option value="<?= $row['id_kategoritermohon'] ?>">
+                                                    <option value="<?= $row['id_kategoritermohon'] ?>" <?php  echo (old('kategori_termohon') == $row['id_kategoritermohon']) ? "selected" : "" ?>>
                                                     <?= $row['nama_kategoritermohon'] ?>
                                                 </option>
                                                 <?php endforeach ?>
@@ -264,7 +259,7 @@
                                             <select id="kota" class="form-select" name="kota_termohon">
                                                 <option selected>Pilih Kota/Kabupaten</option>
                                                 <?php foreach ($kota as $row) : ?>
-                                                <option value="<?= $row['id_kota'] ?>">
+                                                    <option value="<?= $row['id_kota'] ?>" <?php  echo (old('kota_termohon') == $row['id_kota']) ? "selected" : "" ?>>
                                                     <?= $row['nama_kota'] ?>
                                                 </option>
                                                 <?php endforeach ?>
@@ -313,34 +308,35 @@
                                 <div class="accordion-body">
                                     <div class="row">
                                         <div class="col">
+                                        <label for="kategoriSengketa" class="form-label mt-3">Kategori
+                                                Sengketa</label>
+                                            <select id="kategoriSengketa" class="form-select" name="kategori_sengketa">
+                                                <option selected>Pilih Kategori Sengketa</option>
+                                                <?php foreach ($sengketa as $row) : ?>
+                                                <option value="<?= $row['id_kategorisengketa'] ?>" <?php  echo (old('kategori_sengketa') == $row['id_kategorisengketa']) ? "selected" : "" ?>>
+                                                    <?= $row['nama_kategorisengketa'] ?>
+                                                </option>
+                                                <?php endforeach ?>
+                                            </select>
                                             <!-- Deskripsi -->
                                             <label for="deskripsi" class="form-label mt-3">Deskripsi</label>
                                             <textarea class="form-control" placeholder="Isi deskripsi"
                                                 id="floatingTextarea2" style="height: 100px"
-                                                name="deskripsi_informasiyangdimohon"
-                                                value="<?= old('deskripsi_informasiyangdimohon') ?>"></textarea>
-                                            <!-- Petugas Penerima -->
-                                            <label for="petugasPenerima" class="form-label mt-3">Petugas
-                                                Penerima</label>
-                                            <input type="text" class="form-control" id="petugasPenerima"
-                                                placeholder="Isi petugas penerima"
-                                                name="petugaspenerima_informasiyangdimohon"
-                                                value="<?= old('petugaspenerima_informasiyangdimohon') ?>">
+                                                name="deskripsi_sengketa" ><?= old('deskripsi_sengketa') ?></textarea>
                                             <!-- Alasan Permohonan Informasi -->
                                             <label for="alasan" class="form-label mt-3">Alasan Permohonan
                                                 Informasi</label>
                                             <textarea class="form-control" placeholder="Isi Alasan Permohonan Informasi"
                                                 id="floatingTextarea2" style="height: 100px"
-                                                name="alasan_informasiyangdimohon"
-                                                value="<?= old('alasan_informasiyangdimohon') ?>"></textarea>
+                                                name="alasan_sengketa"><?= old('alasan_sengketa') ?></textarea>
                                         </div>
-                                        <div class="col">
+                                        <div class="col mt-3">
                                             <label for="formFile" class="form-label">Unggah Salinan Dokumen Tambahan
                                                 #1
                                                 <i>format (jpg, png,
                                                     atau pdf)</i></label>
-                                            <input class="form-control" type="file" id="formFile" name="doklengkap"
-                                                value="<?= old('doklengkap') ?>">
+                                            <input class="form-control" type="file" id="formFile" name="dok_sengketa" value="<?= old('dok_sengketa') ?>">
+                                               
                                         </div>
                                     </div>
                                 </div>

@@ -12,6 +12,6 @@ class ModelPemohon extends Model
 
     public function joinReg()
     {
-        return $this->db->table('tbl_identitaspemohonindividu')->select('*')->join('tbl_kota', 'tbl_identitaspemohonindividu.id_kota = tbl_kota.id_kota')->get()->getResultArray();
+        return $this->db->table('tbl_pemohon')->select('*')->join('tbl_kota', 'tbl_pemohon.id_kota = tbl_kota.id_kota')->get()->getResultArray();
     }
 }
